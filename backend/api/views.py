@@ -506,19 +506,17 @@ def ldap_login(request):
             password = data.get('password')
             
             required_groups = {
-                'Front_Desk_User': 'CN=OPT_Front_Desk_User,OU=Groups,OU=LULUGROUPINDIA,DC=lulugroupindia,DC=local',
-                'Admin_User': 'CN=OPT_Admin_User,OU=Groups,OU=LULUGROUPINDIA,DC=lulugroupindia,DC=local',
-                'Management_User': 'CN=OPT_Management_User,OU=Groups,OU=LULUGROUPINDIA,DC=lulugroupindia,DC=local',
-                'End_User':'CN=OPT_End_User,OU=Groups,OU=LULUGROUPINDIA,DC=lulugroupindia,DC=local',
-                #'Management_User':'CN=OPT_Admin_User,OU=Groups,OU=LULUGROUPINDIA,DC=lulugroupindia,DC=local',
-                #'Admin_User': 'CN=OPT_Management_User,OU=Groups,OU=LULUGROUPINDIA,DC=lulugroupindia,DC=local'
+                'Front_Desk_User': '*******',
+                'Admin_User': '********',
+                'Management_User': '********',
+                'End_User':'**********',
             }
 
             
-            LDAP_SERVER = 'ldap://10.4.154.10'
-            LDAP_ADMIN_USER = 'glpidevuser'
-            LDAP_ADMIN_PASSWORD = 'lulu@1234'
-            BASE_DN = 'DC=lulugroupindia,DC=local'
+            LDAP_SERVER = '******'
+            LDAP_ADMIN_USER = '*******'
+            LDAP_ADMIN_PASSWORD = '******'
+            BASE_DN = '********'
 
             server = Server(LDAP_SERVER, get_info=ALL)
             conn = Connection(server, user=LDAP_ADMIN_USER, password=LDAP_ADMIN_PASSWORD)
